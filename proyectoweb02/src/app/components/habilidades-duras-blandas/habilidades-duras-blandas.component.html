@@ -1,0 +1,256 @@
+
+<div class="container-fluid ">
+  <div class="row  col-lg-12 col-md-12  " >
+<h1>HARD & SOFT SKILLS</h1>
+
+<div  >
+ <p id="agregar">    <button type="button" class="btn btn-dark" routerLink="/nuevahabi" *ngIf="isLogged"  >
+    Agregar
+  </button>  </p>
+</div>
+
+
+
+<div>
+ <tr *ngFor="let HabilidadesDurasYBlandas of habilidadesdurasyblandasss " class="col-xs-2 col-sm-2 col-md-2 col-lg-2"  >
+
+  <div class="  container-fluid     ">
+<div   >
+  <circle-progress
+  [percent]="(HabilidadesDurasYBlandas.porcientoHabi)"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="(HabilidadesDurasYBlandas.imagenHabi)"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #d12115  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+  </div>
+
+<button type="button" class="btn btn-light" routerLink="/edithabi/{{HabilidadesDurasYBlandas.idHabi}}"  *ngIf="isLogged"  >
+  <i class="bi bi-pencil-fill"></i>Editar</button>
+<button  type="button" class="btn btn-danger" (click)="deleteHabilidadesDurasYBlandas(HabilidadesDurasYBlandas.idHabi)"  *ngIf="isLogged" >
+  <i class="bi bi-trash-fill"></i>Borrar</button  >
+
+
+
+</div>
+  </div>
+</div>
+
+<!---<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+
+  <div class="container-fluid ">
+  <circle-progress
+  [percent]="33"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-html-5.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #d12115  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center  col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="33"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-css.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="'  #78C000 '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="33"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-bootstrap.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="22"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-springboot.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="22"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-netbeans.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="22"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-mysql.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="50"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/logo-github.png'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="100"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-aprender.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+
+
+<div class=" text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="100"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-progresar.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #0b3e66  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+
+<div class="text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="22"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-ingles.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #ca14d7  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class="text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="100"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-esfuerzo.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="'  #093e12  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+
+<div class="text-center col-sm-4 col-md-4 col-lg-4">
+  <circle-progress
+  [percent]="100"
+  [radius]="100"
+  [showImage]="true"
+  [imageSrc]="'../assets/imagen-trabajo en equipo.PNG'"
+  [imageHeight]="91"
+  [imageWidth]="91"
+  [outerStrokeWidth]="23"
+  [innerStrokeWidth]="12"
+  [outerStrokeColor]="' #eff221  '"
+  [innerStrokeColor]="' #C7E596   '"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+</div>
+</div>
+</div>-->

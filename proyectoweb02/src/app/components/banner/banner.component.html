@@ -1,0 +1,79 @@
+
+<div class="container-fluid ">
+  <div class="row">
+ <!--- <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevobanner" >
+      Agregar
+    </button>
+  </div>-->
+
+  <tr *ngFor="let Banner  of banners ">
+
+    <button type="button" class="btn btn-light" routerLink="/editbanner/{{Banner.idBa}}" *ngIf="isLogged" >
+      <i class="bi bi-pencil-fill"></i>Editar</button>
+
+      <!--<button  type="button" class="btn btn-danger" (click)="deleteBanner(Banner.idBa)">
+        <i class="bi bi-trash-fill"></i>Borrar
+      </button>--->
+
+
+  <div >
+<img class="img-fluid img-banner" [src]="Banner.imagenBa" alt=  "imagen"   image=Responsive   >
+  </div>
+
+</div>
+  </div>
+
+
+
+
+
+
+
+<!--<div class="container-fluid ">
+  <div class="row">
+
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevobanner" >
+      Agregar
+    </button>
+  </div>
+
+  <div class="">
+    <table class="table">
+      <tbody>
+
+        <tr *ngFor="let Banner  of banners ">
+
+
+          <td class=" col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1"  >
+            <div class="  parte2">
+        <img class="img-fluid img-banner" [src]="Banner.imagenBa" alt=  "imagen"   image=Responsive   >
+            </div>
+          </td>
+
+
+<div>
+  <img src="../../../assets/imagen-banner-02.jpg" alt="" >
+</div>
+
+
+          <td >
+            <button type="button" class="btn btn-light" routerLink="/editbanner/{{Banner.idBa}}">
+              <i class="bi bi-pencil-fill"></i>Editar</button>
+          </td>
+
+
+          <td >
+            <button  type="button" class="btn btn-danger" (click)="deleteBanner(Banner.idBa)">
+              <i class="bi bi-trash-fill"></i>Borrar
+            </button>
+          </td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>--->

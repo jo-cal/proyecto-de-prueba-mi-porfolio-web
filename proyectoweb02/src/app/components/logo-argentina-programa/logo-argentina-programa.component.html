@@ -1,0 +1,25 @@
+
+  <div class="container-fluid">
+
+    <div class="logo">
+      <img src="../../../assets/logo-argentina-programa01.PNG" alt="" id="logoAP">
+    </div>
+    <div class="redes">
+      <a href="#contacto"><img src="../../../assets/logo-correo.jpg" alt="correo"></a>;
+      <a href="https://github.com/"><img src="../../../assets/logo-github.png" alt="github"></a>;
+      <!---<button type="button" class="btn btn-outline-light "> INGRESO </button>-->
+
+
+
+        <button class="btn" type="submit" (click)="login()" *ngIf="!isLogged">Iniciar sesion</button>
+        <button class="btn" type="submit" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+
+
+
+
+    </div>
+
+</div>
+
+
+

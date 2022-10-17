@@ -1,0 +1,31 @@
+<div class="col-md-5 offset-md-1">
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <input type="text" name="title" [(ngModel)]="proyecto.tituloPro"  placeholder="Title" class="form-control" autofocus>
+        </div>
+  <br>
+        <div class="form-group  ">
+          <textarea name="description" [(ngModel)]="proyecto.descripcionPro"  placeholder="Description" cols="50" rows="7"   class="from-control" ></textarea>
+        </div>
+  <br>
+        <div class="form-group" >
+          <input type="url" name="image"  [(ngModel)]="proyecto.imagenPro"   placeholder="Image"    class="form-control"  autofocus>
+        </div>
+  <br>
+        <button  class="btn btn-success btn-block"  type="button"   (click)=" edit ? updateProyecto() : saveNewProyecto()" > SAVE </button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="col-md-4  offset-md-1 ">
+    <div class="card card-body text-center">
+    <img [src]="proyecto.imagenPro  == '' ? '/assets/imagen por defecto en el formulario.png' : proyecto.imagenPro " alt="No Image" class="card-img-top">
+      <h3>{{proyecto.idPro}}. {{proyecto.tituloPro  == '' ? 'Proyecto Titulo' : proyecto.tituloPro}}</h3>
+      <p>{{proyecto.descripcionPro == '' ? ' Escribe tu descripcion' : proyecto.descripcionPro}}</p>
+    </div>
+  </div>
+

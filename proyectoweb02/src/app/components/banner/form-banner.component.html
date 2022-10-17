@@ -1,0 +1,32 @@
+<div class="col-md-5 offset-md-1">
+  <div class="card">
+    <div class="card-body">
+      <form>
+
+        <div class="form-group" >
+          <input type="url" name="image"  [(ngModel)]="banner.imagenBa"     placeholder="Image"    class="form-control"  autofocus>
+        </div>
+  <br>
+        <button  class="btn btn-success btn-block"  type="button"   (click)=" edit ? updateBanner() : saveNewBanner()" > SAVE </button>
+      </form>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="col-md-4  offset-md-1 ">
+    <div class="card card-body text-center">
+    <img [src]="banner.imagenBa == '' ? '/assets/imagen por defecto en el formulario.png' : banner.imagenBa" alt="No Image" class="card-img-top">
+    <h3>{{banner.idBa}}. {{banner.imagenBa == '' ? 'Banner Imagen' : banner.imagenBa}}</h3>
+      <p>{{banner.imagenBa  == '' ? ' Escribe tu imagen' : banner.imagenBa }}</p>
+
+    </div>
+  </div>
+
+  <!---<div class="col-md-4  offset-md-1 ">
+    <div class="card card-body text-center">
+    <img [src]="educacion.imagenEdu == '' ? '/assets/imagen por defecto en el formulario.png' : educacion.imagenEdu" alt="No Image" class="card-img-top">
+      <h3>{{educacion.idEdu}}. {{educacion.tituloEdu == '' ? 'Educacion Titulo' : educacion.tituloEdu}}</h3>
+      <p>{{educacion.descripcionEdu == '' ? ' Escribe tu descripcion' : educacion.descripcionEdu}}</p>
+    </div>
+  </div>-->

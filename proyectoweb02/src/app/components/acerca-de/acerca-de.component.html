@@ -1,0 +1,47 @@
+<div class = 'container-fluid'>
+
+  <tr *ngFor="let Usuario of usuarios">
+<div class="row">
+
+  <!---<div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevoace"  *ngIf="isLogged" >
+      Agregar
+    </button>
+  </div>-->
+
+
+
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+  <img src= {{Usuario.imagenUser}}  class="img-fluid" id="imagen" alt="imagen">
+</div>
+
+<button type="button" class="btn btn-light col-lg-1" routerLink="/editace/{{Usuario.idUser}}" *ngIf="isLogged" >
+  <i class="bi bi-pencil-fill"></i>Editar</button>
+
+<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+  <p id="nombre">{{Usuario.nombreUser}}</p>
+  <p id="apellido">{{Usuario.apellidoUser}}</p>
+  <p id="titulo">{{Usuario.tituloUser}}</p>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" >
+  <span>
+    <h1>ACERCA  DE ...</h1>
+    <p>{{Usuario.descripcionUser}} </p>
+  </span>
+</div>
+
+<!---<div class="col-lg-1">
+  <button type="button" class="btn btn-dark" routerLink="/nuevoace" >
+    Agregar
+  </button>
+</div>-->
+
+
+
+<!--<button  type="button" class="btn btn-danger" (click)="deleteUsuario(Usuario.idUser)" *ngIf="isLogged" >
+    <i class="bi bi-trash-fill"></i>Borrar</button>--->
+
+
+</div>
+</div>

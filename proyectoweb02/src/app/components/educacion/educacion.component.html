@@ -1,0 +1,97 @@
+<div class="container-fluid ">
+  <div class="row">
+  <h1>EDUCACION</h1>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged" >
+      Agregar
+    </button>
+  </div>
+  <div class="">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educaciones">
+          <td class=" col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 col-xxl-1"  >
+            <div class="  parte2">
+        <img class="img-fluid img-educacion"   [src]="Educacion.imagenEdu" alt=  "imagen"   image=Responsive   >
+            </div>
+          </td>
+          <td class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3"  >
+            <div class=" parte1">
+              <h3>{{Educacion.tituloEdu}}</h3>
+            </div>
+          </td>
+          <td class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7" >
+            <div class=" parte3">
+            <p > {{Educacion.descripcionEdu}} </p>
+            </div>
+          </td>
+          <td *ngIf="isLogged" >
+            <button type="button" class="btn btn-light" routerLink="/editedu/{{Educacion.idEdu}}">
+              <i class="bi bi-pencil-fill"></i>Editar</button>
+          </td>
+          <td *ngIf="isLogged" >
+            <button  type="button" class="btn btn-danger" (click)="deleteEducacion(Educacion.idEdu)">
+              <i class="bi bi-trash-fill"></i>Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<!---<div class="container-fluid "   routerLink="/editedu/{{Educacion.idEdu}}>
+<div class="row">
+  <h1>EDUCACION</h1>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+      Agregar Educacion
+    </button>
+  </div>
+  <div class="col-lg-12">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of Educacion">
+
+
+          <td>
+            <div class=" col-sm-12 col-md-7 col-lg-7 offset-md-1 offset-lg-1 parte2 ">
+              <img src="../../../assets/imagen-porfolio.PNG" alt="imagen" class="img-fluid img-educacion"   >
+            </div>
+          </td>
+
+
+          <td>
+            <div class=" col-sm-12 col-md-12 col-log-12 parte1">
+              <h3>{{Educacion.tituloEdu}}</h3>
+            </div>
+          </td>
+
+
+          <td>
+            <div class=" col-sm-12 col-md-11 col-log-11 parte1">
+            {{Educacion.descripcionEdu}}
+            </div>
+          </td>
+
+
+          <td *ngIf="isLogged">
+            <button type="button" class="btn btn-light" routerLink="/editedu/{{Educacion.idEdu}}">
+              <i class="bi bi-pencil-fill"></i>Editar</button>
+          </td>
+          <td *ngIf="isLogged">
+            <button  type="button" class="btn btn-danger" (click)="delete(Educacion.idEdu)">
+              <i class="bi bi-trash-fill"></i>Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>-->

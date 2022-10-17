@@ -1,0 +1,22 @@
+.container-fluid{
+  padding: 20px ;
+  width: 100%;
+}
+
+div{
+
+  background-color: hsl(211, 29%, 71%);
+  display: flex;
+  flex-flow: row wrap ;
+  column-gap: 91px;
+
+}
+
+#agregar{
+  display: flex;
+  margin-right: 5px;
+  float: right;
+}
+
+
+

@@ -1,0 +1,49 @@
+#logoAP{
+  width: 200px;
+  float: left;
+  margin-left: 1px;
+  box-shadow: 10px  10px  30px        #010810;
+  box-shadow: ejex  ejey  difumacion  color;
+  border-radius: 100%;
+}
+
+.redes{
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+
+}
+
+
+img{
+  width: 100px;
+  box-shadow: 10px  10px  30px        #010810;
+  box-shadow: ejex  ejey  difumacion  color;
+  border-radius: 100%;
+}
+
+.container-fluid{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4274a9;
+}
+
+.btm{
+  border-width: medium;
+}
+
+/*para la vista del celular*/
+@media(max-width: 575px){
+.container{
+  flex-direction: column;
+}
+
+.redes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+}
